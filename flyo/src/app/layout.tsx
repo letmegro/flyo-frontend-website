@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       
       <body className={` dark:bg-darkBlue dark:text-white ${openSans.className}`}>{children}</body>
     </html>
