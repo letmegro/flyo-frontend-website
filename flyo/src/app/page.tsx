@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { Raleway } from 'next/font/google';
 import { Open_Sans } from 'next/font/google';
 import { useEffect } from 'react';
+import illIntro from 'public/images/illustration-intro.png';
+import accessAIcon from 'public/images/icon-access-anywhere.svg';
+import securityIcon from 'public/images/icon-security.svg';
 
 import { themeIcon, setCall } from './lightToDarkToggleScript';
 
@@ -67,6 +70,57 @@ export default function Home() {
         </button>
       </div>
     </header>
+
+    <section id="hero" className="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom">
+      <div className="container mx-auto px-6 text-center md:pt-20 pb-52">
+        <Image src={illIntro} className='mx-auto' alt=''/>
+        <h1 className="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl">
+          All your files in one secure location, assessible anywhere.
+        </h1>
+        <p className="max-w-sm mx-auto mb-10 text-sm md:max-w-xl md:text-lg">
+          Fylo stores all your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends
+          family, and co-workers.
+        </p>
+        <button className="p-3 rounded-full shadow-lg shadow-cyan-500 w-52 bg-accentCyan hover:scale-95 hover:shadow-none transition-all duration-200">
+          Get Started
+        </button>
+      </div>
+    </section>
+    <section id='features' className='pt-12 bg-gray-50 dark:bg-darkBlue1'>
+      <div className="container mx-auto px-6 pb-32">
+        <div className="flex flex-col items-center justify-center space-y-24 text-center md:flex-row md:space-y-0">
+          {/* items */}
+          <div className="flex flex-col items-center space-y-2 md:1/2">
+            <div className="flex items-center justify-center h-24 mb-6">
+              <Image src={accessAIcon} alt=''/>
+            </div>
+            <h3 className="text-xl font-bold">
+              Access your file from anywhere.
+            </h3>
+            <p className="max-w-md">
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </p>
+          </div>
+          <div className="flex flex-col items-center space-y-2 md:1/2">
+            <div className="flex items-center justify-center h-24 mb-6">
+              <Image src={securityIcon} alt=''/>
+            </div>
+            <h3 className="text-xl font-bold">
+              Security you can trust.
+            </h3>
+            <p className="max-w-md">
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
   </>
   )
 }
