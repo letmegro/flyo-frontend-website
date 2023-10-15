@@ -6,6 +6,10 @@ import { useEffect } from 'react';
 import illIntro from 'public/images/illustration-intro.png';
 import accessAIcon from 'public/images/icon-access-anywhere.svg';
 import securityIcon from 'public/images/icon-security.svg';
+import collabIcon from 'public/images/icon-collaboration.svg';
+import iconAnyfile from 'public/images/icon-any-file.svg';
+import illustrateIcon from 'public/images/illustration-stay-productive.png';
+import arrowIcon from 'public/images/icon-arrow.svg';
 
 import { themeIcon, setCall } from './lightToDarkToggleScript';
 
@@ -90,7 +94,7 @@ export default function Home() {
     <section id='features' className='pt-12 bg-gray-50 dark:bg-darkBlue1'>
       <div className="container mx-auto px-6 pb-32">
         <div className="flex flex-col items-center justify-center space-y-24 text-center md:flex-row md:space-y-0">
-          {/* items */}
+          {/* items section 1 */}
           <div className="flex flex-col items-center space-y-2 md:1/2">
             <div className="flex items-center justify-center h-24 mb-6">
               <Image src={accessAIcon} alt=''/>
@@ -117,10 +121,68 @@ export default function Home() {
             </p>
           </div>
         </div>
-        
+
+        <div className="flex flex-col items-center mt-28 justify-center space-y-24 text-center md:flex-row md:space-y-0">
+          {/* items section 2 */}
+          <div className="flex flex-col items-center space-y-2 md:1/2">
+            <div className="flex items-center justify-center h-24 mb-6">
+              <Image src={collabIcon} alt=''/>
+            </div>
+            <h3 className="text-xl font-bold">
+              Access your file from anywhere.
+            </h3>
+            <p className="max-w-md">
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </p>
+          </div>
+          <div className="flex flex-col items-center space-y-2 md:1/2">
+            <div className="flex items-center justify-center h-24 mb-6">
+              <Image src={iconAnyfile} alt=''/>
+            </div>
+            <h3 className="text-xl font-bold">
+              Security you can trust.
+            </h3>
+            <p className="max-w-md">
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
-
+    {/* productive section */}
+    <section id="productive" className='bg-white dark:bg-darkBlue'>
+      {/* contaier */}
+      <div className="container flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
+        <div className='md:w-1/2'>
+          <Image src={illustrateIcon} className='mb-10' alt=''/>
+        </div>
+        <div className="flex flex-col items-start md:w-1/2">
+          <div className="flex flex-col space-y-5">
+            <h4 className="max-w-md text-xl font-bold md:text-4xl">
+              Stay productive, wherever you are
+            </h4>
+            <p className='text-md md:text-lg'>
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p className='text-md md:text-lg'>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+          </div>
+          {/* link */}
+          <div className='group block mt-4'>
+            <a href="#" className="border-b border-accentCyan text-accentCyan">
+              See how Flyo works
+              <Image src={arrowIcon} className='inline ml-1 group-hover:translate-x-1 duration-200' alt=''/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </>
   )
 }
