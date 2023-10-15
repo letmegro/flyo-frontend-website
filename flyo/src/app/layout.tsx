@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Open_Sans } from 'next/font/google'
 import { Raleway } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='scroll-smooth'>
       
-      <body className={` dark:bg-darkBlue dark:text-white ${openSans.className}`}>{children}</body>
+      <body className={` dark:bg-darkBlue dark:text-white ${openSans.className}`}>{children}<Analytics/></body>
     </html>
   )
 }
