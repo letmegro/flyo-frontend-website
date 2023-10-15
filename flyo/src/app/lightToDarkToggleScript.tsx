@@ -1,7 +1,6 @@
 'use client'
 
 export function themeIcon(){
-    const themeToggleBtn = document.getElementById('theme-toggle') as HTMLButtonElement;
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
     if(localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)){
@@ -14,7 +13,7 @@ export function themeIcon(){
 
 export function setCall(){
     const themeToggleBtn = document.getElementById('theme-toggle') as HTMLButtonElement;
-    themeToggleBtn.addEventListener('click', toggleMode);
+    themeToggleBtn?.addEventListener('click', toggleMode);
 }
 
 function toggleMode(){

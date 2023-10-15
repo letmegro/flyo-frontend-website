@@ -10,6 +10,15 @@ import collabIcon from 'public/images/icon-collaboration.svg';
 import iconAnyfile from 'public/images/icon-any-file.svg';
 import illustrateIcon from 'public/images/illustration-stay-productive.png';
 import arrowIcon from 'public/images/icon-arrow.svg';
+import quoteIcon from 'public/images/bg-quotes.png';
+import prof1 from 'public/images/profile-1.jpg';
+import prof2 from 'public/images/profile-2.jpg';
+import prof3 from 'public/images/profile-3.jpg';
+import phoneIcon from 'public/images/icon-phone.svg';
+import emailIcon from 'public/images/icon-email.svg';
+import fbIcon from 'public/images/facebook.svg';
+import XIcon from 'public/images/twitter.svg';
+import InstaIcon from 'public/images/instagram.svg';
 
 import { themeIcon, setCall } from './lightToDarkToggleScript';
 
@@ -27,9 +36,13 @@ function setMode(){
   else{
     document.documentElement.classList.remove('dark');
   }
+  
   themeIcon();
   setCall();
 }
+
+
+
 export default function Home() {
   useEffect(() => {setMode()}, []);
   return (
@@ -77,7 +90,10 @@ export default function Home() {
 
     <section id="hero" className="bg-curvy-light-mode dark:bg-curvy-dark-mode bg-no-repeat bg-contain bg-bottom">
       <div className="container mx-auto px-6 text-center md:pt-20 pb-52">
-        <Image src={illIntro} className='mx-auto' alt=''/>
+          <div className='group relative'>
+            <Image id='introImg' src={illIntro} className='mx-auto' alt=''></Image>
+            <div id='items-div' className="item-gradient"></div>
+          </div>
         <h1 className="max-w-2xl mx-auto mb-10 text-3xl font-bold leading-normal mt-14 md:text-4xl">
           All your files in one secure location, assessible anywhere.
         </h1>
@@ -157,7 +173,7 @@ export default function Home() {
       {/* contaier */}
       <div className="container flex flex-col items-center mx-auto px-6 pt-24 pb-32 md:flex-row md:space-x-16">
         <div className='md:w-1/2'>
-          <Image src={illustrateIcon} className='mb-10' alt=''/>
+          <Image src={illustrateIcon} className='mb-10 dark:hover:bg-green-500 dark:hover:shadow-xl duration-200 dark:hover:shadow-green-600 dark:hover:rounded-xl' alt=''/>
         </div>
         <div className="flex flex-col items-start md:w-1/2">
           <div className="flex flex-col space-y-5">
@@ -175,7 +191,7 @@ export default function Home() {
           </div>
           {/* link */}
           <div className='group block mt-4'>
-            <a href="#" className="border-b border-accentCyan text-accentCyan">
+            <a href="#" className="border-b border-accentCyan text-accentBlue dark:text-accentCyan">
               See how Flyo works
               <Image src={arrowIcon} className='inline ml-1 group-hover:translate-x-1 duration-200' alt=''/>
             </a>
@@ -183,6 +199,157 @@ export default function Home() {
         </div>
       </div>
     </section>
+
+    {/* testimonials section */}
+    <section id="testimonials" className="bg-gray-50 dark:bg-darkBlue">
+      <div className="container mx-auto px-6 pt-12 pb-80 md:pb-96">
+        {/* boxes */}
+        <div className="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+          <Image src={quoteIcon} alt='' className='absolute left-1 -top-2 w-10 md:-top-16 md:w-20'></Image>
+          {/* box 1 */}
+          <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p className="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            {/* customer info */}
+            <div className="flex space-x-4">
+              <Image src={prof1} alt='' className='w-10 h-10 rounded-full'></Image>
+              <div>
+                <h5 className="text-sm font-semibold">
+                  Satish Patel
+                </h5>
+                <p className="text-xs font-extralight">
+                  Founder & CEO. Huddle
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* box 2 */}
+          <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p className="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            {/* customer info */}
+            <div className="flex space-x-4">
+              <Image src={prof2} alt='' className='w-10 h-10 rounded-full'></Image>
+              <div>
+                <h5 className="text-sm font-semibold">
+                  Bruce McKenzie
+                </h5>
+                <p className="text-xs font-extralight">
+                  Founder & CEO. Huddle 2
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* box 3 */}
+          <div className="flex flex-col p-10 space-y-6 rounded-lg bg-gray-100 dark:bg-darkBlue3 md:w-1/3">
+            <p className="text-sm leading-5 md:text-lg">
+              Fylo has improved our team productivity by an order of magnitude.
+              Since making the switch our team has become a well-oiled
+              collaboration machine.
+            </p>
+            {/* customer info */}
+            <div className="flex space-x-4">
+              <Image src={prof3} alt='' className='w-10 h-10 rounded-full'></Image>
+              <div>
+                <h5 className="text-sm font-semibold">
+                  Eva Boyd
+                </h5>
+                <p className="text-xs font-extralight">
+                  Founder & CEO. Huddle 3
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* early access section */}
+    <section id="early-access" className="relative px-6 dark:bg-darkBlue2 md:px-0">
+      <div className="flex flex-col relative -top-40 max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-2xl bg-gray-200 dark:bg-darkBlue1 md:px-16">
+        <h5 className="text-2xl font-bold">
+          Get early access today
+        </h5>
+        <p className="text-sm">
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+        {/* input & button */}
+        <div className="flex flex-col items-start space-y-6 md:flex-row md:space-y-0 md:space-x-6">
+          <div className="w-full md:flex-1">
+            <input type="text" className="text-black w-full px-10 py-3 rounded-full focus:outline-none" placeholder='email@example.com'/>
+          </div>
+          <button className="w-full hover:animate-pulse p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+            Get Started For Free
+          </button>
+        </div>
+      </div>
+    </section>
+
+    {/* footer */}
+    <footer className="bg-darkBlue2 text-white">
+      <div className="container mx-auto md:pt-12 px-5 pb-10">
+        {/* all items container */}
+        <div className="flex flex-col md:flex-row justify-between space-y-24 md:space-y-0">
+          {/* email & phone */}
+          <div className="mt-10 space-y-6">
+            <div className="flex items-center space-x-3 md:-mt-10">
+              <div className='w-6'>
+                <Image className='scale-10' src={phoneIcon} alt=''></Image>
+              </div>
+              <div className='uppercase'>
+                +1-xxx-xxx-xxxx
+              </div>
+            </div>
+            <div className="flex items-center space-x-3">
+              <div className='w-6'>
+                <Image className='scale-10' src={emailIcon} alt=''></Image>
+              </div>
+              <div>
+                example@fylo.com
+              </div>
+            </div>
+          </div>
+          
+          {/* menus */}
+          <div className="flex flex-col space-y-10 text-xl md:text-base md:space-x-20 md:space-y-0 md:flex-row">
+            <div className="flex flex-col space-y-3">
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>About</a>
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Jobs</a>
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Press</a>
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Blog</a>
+            </div>
+            <div className="flex flex-col space-y-3">
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Contact Us</a>
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Term</a>
+              <a href='#' className='hover:translate-x-1 duration-200 md:hover:scale-110 md:hover:translate-x-0'>Privacy</a>
+            </div>
+          </div>
+
+          {/* social */}
+          <div className="flex justify-center pb-10 space-x-3">
+            <div>
+              <a href="#" className=' '><Image className='p-2 w-auto bg-darkBlue rounded-full ficon' alt='' src={fbIcon}></Image></a>
+            </div>
+            <div>
+              <a href="#"><Image className='p-2 w-auto bg-darkBlue rounded-full ficon' alt='' src={XIcon}></Image></a>
+            </div>
+            <div>
+              <a href="#"><Image className='p-2 w-auto bg-darkBlue rounded-full ficon' alt='' src={InstaIcon}></Image></a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </footer>
+
   </>
   )
 }

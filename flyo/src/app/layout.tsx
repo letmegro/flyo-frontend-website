@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='scroll-smooth'>
       
       <body className={` dark:bg-darkBlue dark:text-white ${openSans.className}`}>{children}</body>
     </html>
