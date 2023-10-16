@@ -102,9 +102,9 @@ export default function Home() {
           Access them wherever you need, share and collaborate with friends
           family, and co-workers.
         </p>
-        <button className="p-3 rounded-full shadow-lg shadow-cyan-500 w-52 bg-accentCyan hover:scale-95 hover:shadow-none transition-all duration-200">
+        <a href='#early-access' className="p-4 px-14 rounded-full shadow-lg shadow-cyan-500 w-52 bg-accentCyan hover:scale-95 hover:shadow-none transition-all duration-200">
           Get Started
-        </button>
+        </a>
       </div>
     </section>
     <section id='features' className='pt-12 bg-gray-50 dark:bg-darkBlue1'>
@@ -286,7 +286,7 @@ export default function Home() {
           <div className="w-full md:flex-1">
             <input type="text" className="text-black w-full px-10 py-3 rounded-full focus:outline-none" placeholder='email@example.com'/>
           </div>
-          <button className="w-full hover:animate-pulse p-3 px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
+          <button className="w-full text-md md:text-lg hover:animate-pulse p-3 px-4 md:px-6 rounded-full bg-accentCyan md:w-56 hover:scale-95">
             Get Started For Free
           </button>
         </div>
